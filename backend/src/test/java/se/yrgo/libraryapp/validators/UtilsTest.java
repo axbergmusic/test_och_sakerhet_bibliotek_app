@@ -29,4 +29,11 @@ public class UtilsTest {
         String filteredName = Utils.cleanAndUnLeet(name);
         assertThat(filteredName).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource({"12345, leas"})
+    void leetSpeakOnlyNumbeurs(String name, String expected) {
+        String filteredName = Utils.cleanAndUnLeet(name);
+        assertThat(filteredName).isEqualTo(expected);
+    }
 }
