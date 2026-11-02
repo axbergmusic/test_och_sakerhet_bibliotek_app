@@ -24,6 +24,6 @@ public final class Username {
      * 
      */
     public static boolean validate(String name) {
-        return regex.matcher(name).matches();
+        return name != null && regex.matcher(name).matches();
     }
 }
